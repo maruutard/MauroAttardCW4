@@ -1,0 +1,281 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.about-p {
+  text-align: left;
+  line-height: 1.8em;
+  padding-left: 18%;
+}
+
+.body {
+  background-color: #eeeeee;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  text-align: center;
+}
+
+.bottom-container{
+   padding: 50px 0 10px;
+   margin: 0;
+   align-content: center;
+}
+
+.box {
+  float: center;
+  width: 33.33%;
+  padding: 50px;
+}
+
+.box_1 {
+  width: 50%;
+}
+
+.copyright{
+  color: #222222;
+  font-size: 0.75rem;
+  padding: 20px 0;
+}
+
+.footer-link img{
+  height: 50px;
+  width: 50px;
+  opacity: 0.5;
+  filter: alpha(opacity=40);
+  margin-right: 10px;
+}
+
+.footer-link img:hover {
+  opacity: 1;
+}
+
+.grid_work::after {
+  content: "";
+  clear: both;
+  display: flex;
+  justify-content: space-around;
+}
+
+.grid_about {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+h1{
+  color: #222222;
+  font-family: 'Roboto', sans-serif;
+  font-size: 5rem;
+  font-weight: normal;
+  margin: 50px auto 0 auto;
+}
+
+h2{
+  color: #222222;
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
+  font-weight: normal;
+  margin: 50px auto 0 auto;
+  padding: 100px 0 60px;
+	  
+}
+
+header {
+	position: fixed;
+	top: 0; left: 0; right: 0;
+	background: #222222;
+	box-shadow: 0 5px 10px rgba(0,0,0,.1);
+	display: flex;
+	justify-content: space-between;
+	padding: 2px 7%;
+	text-decoration: none;
+	z-index: 1000; 
+}
+
+header .logo {
+    width: 5%;
+}
+
+header .nav_bar ul{
+	 list-style: none;
+}
+
+header .nav_bar ul li{
+	 position: relative;
+	 float: left;
+}
+
+header .nav_bar ul li a { /* font */
+	font-size: 14.1px;
+	padding: 22px;
+	color: #eeeeee; 
+	display: block;
+}
+
+header .nav_bar ul li a:hover { /* font hover colour */
+	 text-decoration: none;
+     color: #808080;
+}
+
+header .nav_bar ul li ul {
+	position: absolute;
+	left: 0;
+	width: 200px;
+	background: #222222;
+	display: none; 
+}
+
+header .nav_bar ul li ul li {
+	width: 100%; 
+	border-top: 1px solid rgba(0,0,0,.1); 
+}
+
+header .nav_bar ul li ul li ul  {
+	left: 200px;
+	top: 0; 
+}
+
+header .nav_bar ul li:hover > ul{
+	display: initial;
+}
+
+header label {
+	font-size: 20px;
+	color:  #222222;
+	cursor: pointer;
+	display: none; 
+}
+
+.image {
+    position: relative;
+}
+
+.image-gallery {
+	display: grid; 
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto;
+	grid-gap: 1.5rem;
+}
+
+.image__title {
+    font-size: 1em;
+    font-weight: bold;
+	position: absolute;
+}
+
+.logo_1{
+  display: block;
+  margin-left: left;
+  margin-right: auto;
+  width: 260%;
+}
+
+#menu-bar {
+	 display: none; 
+}
+
+.nav_bar ul{
+	 list-style: none;
+}
+
+.nav_bar ul il{
+	 position: relative;
+	 float: left;
+}
+
+p{
+  color:  #222222;
+}
+
+.profile {
+	max-width: 40%;
+}
+
+.socials {
+  position: relative;
+  display: inline;
+  margin-right: 0 auto;
+  margin-left: 0 auto;
+}
+
+.top_container{
+  background-color: #eeeeee;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+  flex: 33.333%;
+  max-width: 33.333%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+@media screen and (max-width:991px){
+	header {
+		padding: 20px;
+	}
+	
+	header label {
+		display: initial;
+	}
+	
+	header .nav_bar {
+		position: absolute;
+		top: 100%; left: 0; right: 0; 
+		background: #222222;
+		border-top: 1px solid rgba(0,0,0,.1); 
+		display: none;
+	}
+	
+	header .nav_bar ul li {
+		width: 100%;
+	}
+	
+	header .nav_bar ul li ul {
+		position: relative;
+		width: 100%; 
+	}
+	
+	header .nav_bar ul li ul li {
+		background: #222222; 
+	}
+	
+	header .nav_bar ul li ul li ul {
+		width: 100%;
+		left: 0;
+	}
+	
+	.column {
+     flex: 100%;
+     max-width: 100%;
+  }
+	
+   .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+
+	#menu-bar:checked ~ .nav_bar{
+		 display: initial;
+	}
+}
